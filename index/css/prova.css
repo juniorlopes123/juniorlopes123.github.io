@@ -1,0 +1,95 @@
+/*deixar as bordas alinhadas com toda a tela*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/*estilo e alinhamento dos elementos da barra*/
+.barradecima{
+    background-color: rgb(17, 43, 76);
+    color: rgb(113, 121, 144);
+    width: 100%;
+    height: 20px;
+    padding: 40px;
+}
+/*estilo do botao*/
+.estilo {
+
+        background-color: aqua;
+        border: none;
+        padding: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 3px 7px 5px;    
+}
+
+/*botao ativo*/
+.botao:active {
+    color: rgb(17, 43, 76);
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+/*manter as duas classes alinhadas e para cima*/
+.barradecima .botao{
+    padding: 0px;
+    margin-top: -10px;
+}
+/*mudança de cor quando o mouse passa por cima*/
+.botao :hover{
+    color: rgb(255, 255, 255);
+    
+}
+/* criação do menu dropdown, mantendo sua posição lado a lado*/
+.dropdown{
+    position: relative;
+  display: inline-block;
+}
+/*esconder os links do dropdwon*/
+.hoverdrop{
+    display: none;
+}
+
+.dropdown:hover .hoverdrop {
+    position: absolute;
+    background-color: rgb(135, 143, 144);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+/*conteudo que vai compor a caixa do flexbox*/
+.conteudo{
+    display: flex;
+}
+/*conteudo do lado direito*/
+.lateral{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+    width: 20vw;
+    height: 1200px;
+}
+/*conteudo que restou do lado direito*/
+.meio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    height: 1200px;
+    background-color: blue;
+}
+/*resposividade da tela quando diminuida*/
+@media (max-width: 600px){
+    .conteudo{
+        align-items: center;
+        flex-direction: column;
+    }
+    .lateral{
+        width: 100%;
+        height: fit-content;
+    }
+    .meio{
+        width: 100%;
+        height: fit-content;
+    }
+}
