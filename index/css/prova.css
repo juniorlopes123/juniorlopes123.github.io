@@ -48,7 +48,7 @@
 .hoverdrop{
     display: none;
 }
-
+/*estilo e alinhamento do dropdown quando aberto*/
 .dropdown:hover .hoverdrop {
     position: absolute;
     background-color: rgb(135, 143, 144);
